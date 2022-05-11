@@ -235,9 +235,15 @@ body {
         flex-direction: column;
         max-width: 500px;
     }
+
+    .container {
+        margin-top: 15rem;
+    }
+
     .tip-container {
         grid-template-columns: 1fr 1fr;
     }
+
     .amount-container {
         gap: 6rem;
     }
@@ -246,6 +252,7 @@ body {
     .cart {
         max-width: 350px;
     }
+
     .amount-container {
         gap: 3rem;
     }
