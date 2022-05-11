@@ -28,27 +28,28 @@ btnReset.addEventListener("click", function () {
     totalAmountEl.textContent = "$0.00";
     bill.value = "";
     person.value = "";
+    customTip.value = "";
     btnCustom.classList.remove("hidden");
     customTip.classList.add("hidden");
 });
 /////////////////////////////BILL CALCULATION//////////////////////
 function calcBill(e) {
     const billValue = +bill.value;
-    const personValue = +person.value;
+    const personValue = person.value;
     const tipValue = +parseInt(e.target.value);
     checkNumPerson(personValue);
-    if (!billValue || !personValue || !tipValue) return;
+    if (!billValue || !+personValue || !tipValue) return;
 
-    const tipAmount = +((billValue * (tipValue / 100)) / personValue).toFixed(
+    const tipAmount = +((billValue * (tipValue / 100)) / +personValue).toFixed(
         2
     );
-    const totalAmount = billValue / personValue + tipAmount;
+    const totalAmount = billValue / +personValue + tipAmount;
     tipAmountEl.textContent = `$${tipAmount}`;
     totalAmountEl.textContent = `$${totalAmount.toFixed(2)}`;
 }
 //////////////////////CHECK NUMBER OF PERSONS////////////////////////
 function checkNumPerson(personValue) {
-    personValue === 0
+    personValue === "0"
         ? person.closest(".form-control").classList.add("notValid")
         : person.closest(".form-control").classList.remove("notValid");
 }
