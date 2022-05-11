@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Manrope:wght@800&family=Overpass:wght@400;700&family=Poppins:wght@400;500;600;700&family=Space+Mono:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+
+</head>
+
+<body>
+    <section class="container">
+        <p class="cart-title">spli <br> tter</p>
+
+        <div class="cart">
+            <div class="bill-container">
+                <div class="form-control">
+                    <label for="bill">Bill</label>
+                    <input type="text" name="bill" id="bill">
+                    <img src="images/icon-dollar.svg" alt="dollar-icon">
+                </div>
+                <p>Select Tip %</p>
+                <div class="tip-container">
+
+                    <button class="btn btn-tip" value=" 5%">5%</button>
+                    <button class="btn btn-tip" value=" 10%">10%</button>
+                    <button class="btn btn-tip" value=" 15%">15%</button>
+                    <button class="btn btn-tip" value=" 25%">25%</button>
+                    <button class="btn btn-tip" value=" 50%">50%</button>
+                    <button class="btn btn-custom ">Custom</button>
+                    <input type="text" class="btn btn-custom width hidden custom-tip">
+
+
+                </div>
+                <div class="form-control">
+                    <span class="error-hidden">Cant be zero</span>
+                    <label for="bill">Number of Poeple</label>
+                    <input type="text" name="bill" id="person">
+                    <img src="images/icon-person.svg" alt="person-icon">
+                </div>
+            </div>
+
+            <div class="amount-container">
+                <div class="tipAndTotalAmount">
+                    <div class="tip-amount">
+                        <div>
+                            <p class="title"> Tip Amount</p>
+                            <p class="person"> / person</p>
+                        </div>
+                        <p class="amount-tip">$0.00</p>
+                    </div>
+
+                    <div class="tip-amount">
+                        <div>
+                            <p class="title"> Total Amount</p>
+                            <p class="person"> / person</p>
+                        </div>
+                        <p class="amount-total ">$0.00</p>
+                    </div>
+                </div>
+
+                <div btn-reset-container>
+                    <button class="btn btn-reset">Reset</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
